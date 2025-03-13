@@ -1,0 +1,148 @@
+.main {
+  max-width: 1100px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  margin-top: 80px;
+  margin-bottom: 100px;
+
+  /* margin-left: auto;
+     margin-right auto;
+     Is a trick for centering an element horizontally
+     without needing a container. */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-title {
+  font-weight: 600;
+  font-size: 25px;
+  margin-bottom: 18px;
+}
+
+.checkout-grid {
+  display: grid;
+  /* Here, 1fr means the first column will take
+     up the remaining space in the grid. */
+  grid-template-columns: 1fr 350px;
+  column-gap: 12px;
+
+  /* Use align-items: start; to prevent the elements
+     in the grid from stretching vertically. */
+  align-items: start;
+}
+
+@media (max-width: 1000px) {
+  .main {
+    max-width: 100%;
+  }
+
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cart-item-container,
+.payment-summary {
+  border: 1px solid rgb(222, 222, 222);
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.cart-item-container {
+  margin-bottom: 12px;
+}
+
+@media (max-width: 1000px) {
+  .payment-summary {
+    /* grid-row: 1 means this element will be placed into row
+      1 in the grid. (Normally, the row that an element is
+      placed in is determined by the order of the elements in
+      the HTML. grid-row overrides this default ordering). */
+    grid-row: 2;
+    margin-bottom: 12px;
+  }
+}
+
+.cart-item-details-grid {
+  display: grid;
+  /* 100px 1fr 1fr; means the 2nd and 3rd column will
+     take up half the remaining space in the grid
+     (they will divide up the remaining space evenly). */
+  grid-template-columns: 200px 1fr;
+  column-gap: 25px;
+}
+
+@media (max-width: 1000px) {
+  .cart-item-details-grid {
+    grid-template-columns: 180px 1fr;
+    row-gap: 30px;
+  }
+}
+
+.product-image {
+  max-width: 200px;
+  max-height: 100px;
+
+  /* margin-left: auto;
+     margin-right auto;
+     Is a trick for centering an element horizontally
+     without needing a container. */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.name-price {
+  display: grid;
+  grid-template-columns: 1fr 80px 60px;
+  column-gap: 15px;
+}
+
+.product-name {
+  font-size: 12px;
+  margin-bottom: 8px;
+  color: rgb(49, 119, 238);
+}
+
+.product-price {
+  color: rgb(177, 39, 4);
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.update-quantity-link,
+.delete-quantity-link {
+  background-color: rgb(238, 235, 235);
+  font-size: 12px;
+  font-weight: 500px;
+  border: none;
+  color: black;
+  padding: 8px 15px;
+  border-radius: 4px;
+}
+
+.payment-summary-title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.payment-summary-row {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgb(177, 39, 4);
+}
+.select-option {
+  background-color: white;
+  width: 60px;
+  border-radius: 4px;
+}
+.place-order-button {
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 4px;
+
+  margin-top: 11px;
+  margin-bottom: 15px;
+}
